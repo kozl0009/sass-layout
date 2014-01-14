@@ -1,1 +1,85 @@
 body{ border: 1px solid red; }
+
+/* -- Mixins Above -- */
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* -- Banner Components -- */
+.banner {
+	height: 300px;
+	width: 100%;
+	background: #000;
+}
+
+/* -- Navigation components -- */
+.main-nav{
+	ul{padding:0;margin:0;}
+	li{margin-top:1em;}
+	/* li:first-child{margin-top:0;} */
+	a{display:block; background:#ececec;}
+	
+	@media (min-width: 40em){
+		ul{@include clearfix; }
+		li{float:left; margin-left:1em;}
+		li:first-child{margin-left:0;}
+		a{padding: 0.5em 1em;}
+	}
+}
+
+/* -- Layout Components -- */
+.container{
+	margin: 0 auto;
+	border: 1px solid red;
+	
+	@media (min-width:40em){
+		width:40em;
+	}
+	
+	@media (min-width: 55em){
+		width:55em;
+	}
+}
+
+.col-container{
+	@include clearfix;
+}
+
+.col {
+	margin-top: 1em;
+	padding-top: 1em;
+	border-top:1px solid blue;
+	&:first-child{margin-top:0; padding-top:0;border:none;}
+	
+	@media (min-width:40em){
+		float:left;
+		margin-top:0;
+		padding-top:0;
+		border:none;
+	}
+}
+
+.col-2 {
+	background: orange;
+	@media(min-width: 40em){
+		width: 48.75%;
+		margin-left:2.5%;
+		&:first-child{margin-left:0;}
+	}
+}
+
+.col-3 {
+	background: blue;
+	@media(min-width: 40em){
+		width: 32%;
+		margin-left:2%;
+		&:first-child{margin-left:0;}
+	}
+}

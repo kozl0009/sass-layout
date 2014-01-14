@@ -1,2 +1,84 @@
 body {
   border: 1px solid red; }
+
+/* -- Mixins Above -- */
+/* -- Banner Components -- */
+.banner {
+  height: 300px;
+  width: 100%;
+  background: #000; }
+
+/* -- Navigation components -- */
+.main-nav {
+  /* li:first-child{margin-top:0;} */ }
+  .main-nav ul {
+    padding: 0;
+    margin: 0; }
+  .main-nav li {
+    margin-top: 1em; }
+  .main-nav a {
+    display: block;
+    background: #ececec; }
+  @media (min-width: 40em) {
+    .main-nav ul:before, .main-nav ul:after {
+      content: " ";
+      display: table; }
+    .main-nav ul:after {
+      clear: both; }
+    .main-nav li {
+      float: left;
+      margin-left: 1em; }
+    .main-nav li:first-child {
+      margin-left: 0; }
+    .main-nav a {
+      padding: 0.5em 1em; } }
+
+/* -- Layout Components -- */
+.container {
+  margin: 0 auto;
+  border: 1px solid red; }
+  @media (min-width: 40em) {
+    .container {
+      width: 40em; } }
+  @media (min-width: 55em) {
+    .container {
+      width: 55em; } }
+
+.col-container:before, .col-container:after {
+  content: " ";
+  display: table; }
+.col-container:after {
+  clear: both; }
+
+.col {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid blue; }
+  .col:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border: none; }
+  @media (min-width: 40em) {
+    .col {
+      float: left;
+      margin-top: 0;
+      padding-top: 0;
+      border: none; } }
+
+.col-2 {
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-2 {
+      width: 48.75%;
+      margin-left: 2.5%; }
+      .col-2:first-child {
+        margin-left: 0; } }
+
+.col-3 {
+  background: blue; }
+  @media (min-width: 40em) {
+    .col-3 {
+      width: 32%;
+      margin-left: 2%; }
+      .col-3:first-child {
+        margin-left: 0; } }

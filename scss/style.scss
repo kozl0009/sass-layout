@@ -15,6 +15,15 @@ body{
   }
 }
 
+/* Cross Browser Border Radius Mixin */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
 /* -- Header Containers -- */
 #header-container {
 	position: fixed;
@@ -59,7 +68,7 @@ body{
 	#nav-secondary {
 		
 		float: right;
-		ul{padding:1em 0 0 0.5em;margin:0 1em 0 0;float: left;width: auto;}
+		ul{padding:0 0 0 0.5em;margin:0 1em 0 0;float: left;width: auto;}
 		li{
 			&:before{
 				content: " ";
@@ -115,13 +124,34 @@ body{
 			text-decoration: none;
 		}
 		
-		.search {
+		.search-trigger {
 			background: url('../img/search-ico.gif') no-repeat;
 			width: 52px;
 			height: 52px;
 			float: right;
+			cursor: hand;
+			cursor: pointer;
 		}
 		
+		
+	}
+	
+	#search-bar{ 
+		padding-top: .4em;
+		width: 0; 
+		overflow: hidden; 
+		float: right;
+		
+		.searchBar {
+			width: 200px;
+			height: 20px;
+			margin-right: 1em;
+			background: url('../img/searchbar-ico.gif') no-repeat;
+			padding: 0.6em 0 0.6em 30px;
+			color: #aaa;
+			border: 1px solid #c0c0c0;
+			@include border-radius(2px); 
+		}
 	}
 }
 

@@ -159,7 +159,7 @@ h1,p,ul {margin:0;padding:0;}
 }
 
 #header-container-after {
-	margin-top: 44px;
+	margin-top: -3.5em;
 }
 
 /* -- Banner Components -- */
@@ -186,8 +186,51 @@ h1,p,ul {margin:0;padding:0;}
 
 /* -- Layout Components -- */
 .container{
-	margin: 1em auto 0 auto;
+	margin: 7em auto 0 auto;
 	/* border: 1px solid red; */
+	
+	@media (min-width:40em){
+		width:40em;
+	}
+	
+	@media (min-width: 55em){
+		width:55em;
+	}
+	
+	@media (min-width:80em){
+		width:64em;
+	}
+}
+
+.most-dugg-upcoming {
+	margin: 3em auto 0 auto;
+	/* border: 1px solid red; */
+	
+	@media (min-width:40em){
+		width:40em;
+	}
+	
+	@media (min-width: 55em){
+		width:55em;
+	}
+	
+	@media (min-width:80em){
+		width:64em;
+	}
+}
+
+.container-slider5{
+	margin: 0 auto;
+	/* border: 1px solid red; */
+	h2 {
+		font-weight: bold;
+		margin: 0;
+		color: rgb(255, 255, 255);
+		cursor: auto;
+		display: inline;
+		font-family: lft-etica, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 15px;
+	}
 	
 	
 	@media (min-width:40em){
@@ -211,7 +254,28 @@ h1,p,ul {margin:0;padding:0;}
 .col-container-slider5 {
 	@include clearfix;
 	margin-top: 1em;
-	background: #336699;
+	background: url('../img/slider/bg.jpeg') no-repeat;
+	background-size: 100%;
+	
+		.slider-header {
+			@include clearfix;
+			margin: 1em 0 1em 1.5em;
+			color: #fff;
+			font: .875em "lft-etica","Helvetica Neue",Helvetica,Arial,sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		
+		.slider-header-title {
+			float: left;
+			width: auto;
+		}
+		
+		.slider-header-all {
+			float: right;
+			width: auto;
+			text-align: right;
+		}
 }
 
 .col {
@@ -230,10 +294,11 @@ h1,p,ul {margin:0;padding:0;}
 
 .col-2 {
 	background: orange;
-	@media(min-width: 40em){
-		width: 48.75%;
-		margin-left:2.5%;
-		&:first-child{margin-left:0;}
+	@media(min-width: 80em){
+		width: 38.75%;
+		margin-left:2%;
+		border-left: 1px solid #c0c0c0;
+		&:first-child{margin-left:0;width: 58.75%;border-left: 0;}
 	}
 }
 
@@ -271,6 +336,59 @@ h1,p,ul {margin:0;padding:0;}
 			font-weight: bold;
 		}
 		
+		.story-actions-container {
+			height: 25px;
+			@include clearfix;
+			float: left;
+		}
+		
+		.story-actions {
+			@include clearfix;
+			ul{margin:0.4em 0 0 0;padding:0;float:left;width:500px;}
+			li{
+				display: inline;
+				padding: 4px 4px 4px 19px;
+				font-family: source-sans-pro, 'Helvetica Neue', sans-serif;
+				font-size: 13px;
+				margin-right: 10px;
+				border: 1px solid #fff;
+				@include border-radius(2px); 
+				
+			}
+			
+			li:hover {
+				border: 1px solid #c0c0c0;
+				@include border-radius(2px); 
+			}
+			
+			.digg {
+				background: url('../img/social/digg.gif') center left no-repeat;
+			}
+			
+			.save {
+				background: url('../img/social/save.gif') center left no-repeat;
+			}
+			
+			.facebook {
+				background: url('../img/social/facebook.gif') center left no-repeat;
+			}
+			
+			.twitter {
+				background: url('../img/social/twitter.gif') center left no-repeat;
+			}
+			
+
+		}
+		
+		.story-descr {
+			font-family: source-sans-pro, 'Helvetica Neue', sans-serif;
+			font-size: 14px;
+			color: rgb(68, 68, 68);
+			float: left;
+		}
+	}
+}
+
 		.story-meta {
 			@include clearfix;
 			ul{padding:0.2em 0 0.2em 0;margin:0;float: left;width: auto;}
@@ -308,58 +426,22 @@ h1,p,ul {margin:0;padding:0;}
 			
 			
 		}
-		
-		.story-actions {
-			@include clearfix;
-			ul{margin:0.4em 0 0 0;padding:0;float:left;width:500px;}
-			li{
-				display: inline;
-				padding: 4px 4px 4px 19px;
-				font-family: source-sans-pro, 'Helvetica Neue', sans-serif;
-				font-size: 13px;
-				margin-right: 10px;
-				border: 1px solid #fff;
-				@include border-radius(2px); 
-				
-			}
-			
-			li:hover {
-				border: 1px solid #c0c0c0;
-				@include border-radius(2px); 
-			}
-			
-			.digg {
-				background: url('../img/social/digg.gif') center left no-repeat;
-			}
-			
-			.save {
-				background: url('../img/social/save.gif') center left no-repeat;
-			}
-			
-			.facebook {
-				background: url('../img/social/facebook.gif') center left no-repeat;
-			}
-			
-			.twitter {
-				background: url('../img/social/twitter.gif') center left no-repeat;
-			}
-
-		}
-		
-		.story-descr {
-			font-family: source-sans-pro, 'Helvetica Neue', sans-serif;
-			font-size: 14px;
-			color: rgb(68, 68, 68);
-			float: left;
-		}
-	}
-}
 
 .col-5 {
-	@media(min-width: 40em){
-		width: 18.4%;
-		margin-left:2%;
-		&:first-child{margin-left:0;}	
+	@media(min-width: 80em){
+		width: 17.8%;
+		margin: 1em 0 1em 2%;
+		&:first-child{margin: 1em 0 1em 0;}	
+		
+		img {
+			width: 191px;
+		}
+		
+		a {
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+		}
+		
 	}
 }
 

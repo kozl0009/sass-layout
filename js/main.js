@@ -33,7 +33,7 @@ $(document).ready(function(){
 			});
 		}
 	});
-	
+	/*
 	$(function() {
     $( document ).tooltip({
 		position: {
@@ -48,6 +48,26 @@ $(document).ready(function(){
 					.appendTo( this );
 				}
 			}
+		});
+	});
+	*/
+	
+	
+	//hide story actions
+	var storyActions = ".story-actions";
+	$( storyActions ).hide();
+	var articleDiv = ".article";
+
+	// With the element initially hidden, we can show it slowly:
+	$( articleDiv ).mouseenter(function() {
+		$(this).find(storyActions).fadeIn( "slow", function() {
+				// Animation complete
+		});
+	});
+	
+	$( articleDiv ).mouseleave(function() {
+		$(this).find(storyActions).fadeOut( "slow", function() {
+			// Animation complete
 		});
 	});
 }); 

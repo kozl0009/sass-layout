@@ -24,7 +24,7 @@ body{
           border-radius: $radius;
 }
 
-h1 {margin:0;}
+h1,p,ul {margin:0;padding:0;}
 
 
 /* -- Header Containers -- */
@@ -265,14 +265,15 @@ h1 {margin:0;}
 			-o-transition: color .15s cubic-bezier(0,0,0.58,1);
 			transition: color .15s cubic-bezier(0,0,0.58,1);
 			font-family: lft-etica, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			font-size: 22px;
+			font-size: 20px;
 			line-height: 24.992000579833984px;
 			margin-top: .4em;
 			font-weight: bold;
 		}
 		
 		.story-meta {
-			ul{padding:0;margin:0;float: left;width: auto;}
+			@include clearfix;
+			ul{padding:0.2em 0 0.2em 0;margin:0;float: left;width: auto;}
 			li{
 				&:before{
 					content: " ";
@@ -288,9 +289,8 @@ h1 {margin:0;}
 					font: .875em "source-sans-pro","Helvetica Neue",sans-serif;
 					font-weight: bold;
 				}
-				margin-right:0.1em;
 				display: inline;
-				font: .775em "source-sans-pro","Helvetica Neue",sans-serif;
+				font: .675em "source-sans-pro","Helvetica Neue",sans-serif;
 				color: #aaa;
 			}
 			li:first-child{
@@ -298,6 +298,7 @@ h1 {margin:0;}
 					content: "";
 					display: table;
 				}
+				font-weight: bold;
 			}
 			
 			a {
@@ -308,10 +309,46 @@ h1 {margin:0;}
 			
 		}
 		
+		.story-actions {
+			@include clearfix;
+			ul{margin:0.4em 0 0 0;padding:0;float:left;width:500px;}
+			li{
+				display: inline;
+				padding: 4px 4px 4px 19px;
+				font-family: source-sans-pro, 'Helvetica Neue', sans-serif;
+				font-size: 13px;
+				margin-right: 10px;
+				border: 1px solid #fff;
+				@include border-radius(2px); 
+				
+			}
+			
+			li:hover {
+				border: 1px solid #c0c0c0;
+				@include border-radius(2px); 
+			}
+			
+			.digg {
+				background: url('../img/social/digg.gif') center left no-repeat;
+			}
+			
+			.save {
+				background: url('../img/social/save.gif') center left no-repeat;
+			}
+			
+			.facebook {
+				background: url('../img/social/facebook.gif') center left no-repeat;
+			}
+			
+			.twitter {
+				background: url('../img/social/twitter.gif') center left no-repeat;
+			}
+
+		}
+		
 		.story-descr {
 			font-family: source-sans-pro, 'Helvetica Neue', sans-serif;
 			font-size: 14px;
-			font-family:source-sans-pro, 'Helvetica Neue', sans-serif;
 			color: rgb(68, 68, 68);
 			float: left;
 		}

@@ -242,7 +242,7 @@ h1,p,ul {margin:0;padding:0;}
 	}
 	
 	@media (min-width:80em){
-		width:64em;
+		width:66.5em;
 	}
 }
 
@@ -259,7 +259,7 @@ h1,p,ul {margin:0;padding:0;}
 	
 		.slider-header {
 			@include clearfix;
-			margin: 1em 0 1em 1.5em;
+			margin: 1em 3.2em 1em 1.5em;
 			color: #fff;
 			font: .875em "lft-etica","Helvetica Neue",Helvetica,Arial,sans-serif;
 			text-transform: uppercase;
@@ -268,13 +268,13 @@ h1,p,ul {margin:0;padding:0;}
 		
 		.slider-header-title {
 			float: left;
-			width: auto;
+			
 		}
 		
 		.slider-header-all {
 			float: right;
-			width: auto;
-			text-align: right;
+			
+			text-align: left;
 		}
 }
 
@@ -429,7 +429,7 @@ h1,p,ul {margin:0;padding:0;}
 
 .col-5 {
 	@media(min-width: 80em){
-		width: 17.8%;
+		width: 17%;
 		margin: 1em 0 1em 2%;
 		&:first-child{margin: 1em 0 1em 0;}	
 		

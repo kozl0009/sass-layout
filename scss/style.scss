@@ -1,3 +1,9 @@
+/* global variables */
+$font1: "lft-etica","Helvetica Neue",Helvetica,Arial,sans-serif;
+$font2: "source-sans-pro","Helvetica Neue",sans-serif;
+$font3: lft-etica, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font4: source-sans-pro, 'Helvetica Neue', sans-serif;
+
 body{ 
 	/* border: 1px solid red; */
 	margin: 0;
@@ -51,7 +57,7 @@ h1,p,ul {margin:0;padding:0;}
 		float: left;
 		ul{padding:1em 0 0 0.5em;margin:0;float: left;width: auto;}
 		li{margin-left:1em;display: inline;
-		font:.875em "lft-etica","Helvetica Neue",Helvetica,Arial,sans-serif;}
+		font:.875em $font1;}
 		li:first-child{margin-left:0;}
 		
 		a {
@@ -84,12 +90,12 @@ h1,p,ul {margin:0;padding:0;}
 				-moz-transition: color 120ms cubic-bezier(0.455,0.03,0.515,0.955);
 				-o-transition: color 120ms cubic-bezier(0.455,0.03,0.515,0.955);
 				transition: color 120ms cubic-bezier(0.455,0.03,0.515,0.955);
-				font: .875em "source-sans-pro","Helvetica Neue",sans-serif;
+				font: .875em $font2;
 				font-weight: bold;
 			}
 			margin-right:0.1em;
 			display: inline;
-			font: .875em "source-sans-pro","Helvetica Neue",sans-serif;
+			font: .875em $font2;
 			color: #aaa;
 		}
 		li:first-child{
@@ -233,7 +239,7 @@ h1,p,ul {margin:0;padding:0;}
 		color: rgb(255, 255, 255);
 		cursor: auto;
 		display: inline;
-		font-family: lft-etica, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-family: $font3;
 		font-size: 15px;
 	}
 	
@@ -266,7 +272,7 @@ h1,p,ul {margin:0;padding:0;}
 			@include clearfix;
 			margin: 1em 3.2em 1em 1.5em;
 			color: #fff;
-			font: .875em "lft-etica","Helvetica Neue",Helvetica,Arial,sans-serif;
+			font: .875em $font1;
 			text-transform: uppercase;
 			letter-spacing: 1px;
 		}
@@ -309,7 +315,7 @@ h1,p,ul {margin:0;padding:0;}
 		.head {
 			@include clearfix;
 			color: #000;
-			font: .875em "lft-etica","Helvetica Neue",Helvetica,Arial,sans-serif;
+			font: .875em $font1;
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			margin: 0;
@@ -329,7 +335,7 @@ h1,p,ul {margin:0;padding:0;}
 		.count {
 			float: left;
 			padding: 0.5em 1em 0 0;
-			font-family: source-sans-pro, 'Helvetica Neue', sans-serif;
+			font-family: $font4;
 		}
 		
 		.image {
@@ -365,7 +371,7 @@ h1,p,ul {margin:0;padding:0;}
 		/* -- Articles -- */
 	
 		.story-descr {
-			font-family: source-sans-pro, 'Helvetica Neue', sans-serif;
+			font-family: $font4;
 			font-size: 14px;
 			color: rgb(68, 68, 68);
 			float: left;
@@ -385,7 +391,7 @@ h1,p,ul {margin:0;padding:0;}
 
 		.source-title {
 			color: #555;
-			font: 700 .688em/1.091em "lft-etica","Helvetica Neue",Helvetica,Arial,sans-serif;
+			font: 700 .688em/1.091em $font1;
 			letter-spacing: 1px;
 		}
 
@@ -396,7 +402,7 @@ h1,p,ul {margin:0;padding:0;}
 			-moz-transition: color .15s cubic-bezier(0,0,0.58,1);
 			-o-transition: color .15s cubic-bezier(0,0,0.58,1);
 			transition: color .15s cubic-bezier(0,0,0.58,1);
-			font-family: lft-etica, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-family: $font3;
 			font-size: 20px;
 			line-height: 24.992000579833984px;
 			margin-top: .4em;
@@ -415,7 +421,7 @@ h1,p,ul {margin:0;padding:0;}
 			li{
 				display: inline;
 				padding: 4px 4px 4px 19px;
-				font-family: source-sans-pro, 'Helvetica Neue', sans-serif;
+				font-family: $font4;
 				font-size: 13px;
 				margin-right: 10px;
 				border: 1px solid #fff;
@@ -461,11 +467,11 @@ h1,p,ul {margin:0;padding:0;}
 					-moz-transition: color 120ms cubic-bezier(0.455,0.03,0.515,0.955);
 					-o-transition: color 120ms cubic-bezier(0.455,0.03,0.515,0.955);
 					transition: color 120ms cubic-bezier(0.455,0.03,0.515,0.955);
-					font: .875em "source-sans-pro","Helvetica Neue",sans-serif;
+					font: .875em $font2;
 					font-weight: bold;
 				}
 				display: inline;
-				font: .675em "source-sans-pro","Helvetica Neue",sans-serif;
+				font: .675em $font2;
 				color: #aaa;
 			}
 			li:first-child{
@@ -524,7 +530,7 @@ h1,p,ul {margin:0;padding:0;}
 		h3 {
 			font-size: .9em;
 			font-weight: 700;
-			font-family: source-sans-pro, 'Helvetica Neue', sans-serif;
+			font-family: $font4;
 			color: #606060;
 		}
 	}
@@ -552,7 +558,7 @@ h1,p,ul {margin:0;padding:0;}
 		.dl-button {
 			background: #efefef;
 			padding: .9em;
-			font: 0.70em source-sans-pro, 'Helvetica Neue', sans-serif;
+			font: 0.70em $font4;
 			float: left;
 			position: relative;
 			margin-top: 1em;
@@ -564,7 +570,7 @@ h1,p,ul {margin:0;padding:0;}
 		width: 40%;
 		position: relative;
 		float: left;
-		font: 0.82em source-sans-pro, 'Helvetica Neue', sans-serif;
+		font: 0.82em $font4;
 		color: #aaa;
 	}
 	
@@ -607,7 +613,7 @@ h1,p,ul {margin:0;padding:0;}
 		li {
 			list-style: none;
 			padding: 0 0 1em 35px;
-			font: 0.82em source-sans-pro, 'Helvetica Neue', sans-serif;
+			font: 0.82em $font4;
 		}
 		
 		.ftwitter {
@@ -646,7 +652,7 @@ h1,p,ul {margin:0;padding:0;}
 		ul{padding:0.2em 0 0.2em 0;margin:0;float: left;width: auto;}
 		li{
 			display: inline;
-			font: 0.9em "source-sans-pro","Helvetica Neue",sans-serif;
+			font: 0.9em $font2;
 			color: #000;
 			margin-left: 1em;
 		}
